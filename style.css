@@ -1,0 +1,149 @@
+/* STYLE BODY */
+* {
+    font-family: "poppins" sans-serif;
+}
+
+body {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("image/fond.png") center/cover no-repeat fixed;
+    height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(119deg, #ed4690 -2.11%, #52c 63.58%);
+    opacity: 0.9;
+    z-index: -1;
+    height: 100vh;
+}
+/* STYLE NAVBAR */
+img {
+    margin-left: 100px;
+}
+.navbar-collapse {
+    margin-right: 100px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+    border-radius: 50px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+body.show-navbar .navbar-collapse {
+    right: 0;
+}
+
+.close-btn {
+    display: none;
+    margin-bottom: 15px;
+}
+
+/* STYLE CARD */
+.card {
+    margin-top: 160px;
+    margin-bottom: 50px;
+    border-radius: 44px;
+    background: rgba(217, 217, 217, 0.6);
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: none;
+}
+.title {
+    text-align: center;
+    color: #000;
+    font-family: "poppins";
+    font-size: 35xpx;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgot-password-container {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.login-btn {
+    background-color: rgba(245, 22, 126, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+    width: 150px;
+    height: 50px;
+    margin-top: 15px;
+}
+.login-btn:hover {
+    background-color: rgba(141, 8, 70, 0.6);
+}
+
+.signup {
+    text-align: center;
+}
+
+.form-control {
+    padding: 15px;
+    border-style: none;
+    border-radius: 20px;
+}
+.input-group-text {
+    color: rgb(83, 18, 235);
+    background-color: #fff;
+    border-style: none;
+}
+.input-group-text {
+    border-radius: 20px;
+}
+.otp-input {
+    width: 20%; /* Ajustez la largeur selon vos besoins */
+    text-align: center;
+}
+
+/* STYLE ECRAN MOBILE */
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100%;
+        overflow-y: auto;
+        transition: right 0.3s ease;
+        background-color: #000000;
+        padding: 20px;
+        text-align: center;
+    }
+    img {
+        margin-left: 10px;
+    }
+
+    .navbar.show .navbar-collapse {
+        right: 0;
+    }
+
+    .close-btn {
+        display: block;
+    }
+}
