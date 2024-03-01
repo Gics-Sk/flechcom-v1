@@ -1,6 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector('form');
 
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Empêche le formulaire de se soumettre normalement
+
+        const password1 = document.getElementById('password1').value;
+        const password2 = document.getElementById('password2').value;
+
+        // Vérifier si les mots de passe correspondent
+        if (password1 !== password2) {
+            // Afficher un message d'erreur si les mots de passe ne correspondent pas
+            alert("Les mots de passe ne correspondent pas");
+            return;
+        }
+    });
+
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Empêche le formulaire de se soumettre normalement
 
@@ -10,14 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
             phone: document.getElementById('phone').value,
             email: document.getElementById('Email').value,
             password: document.getElementById('password1').value,
-            password1: document.getElementById('password2').value,
+            
             
 
             // Ajoutez d'autres champs si nécessaire
         };
 
         // Effectuez une requête POST vers votre endpoint avec les données de formulaire
-        fetch('votre_endpoint', {
+        fetch('https://event-management-5cp7.onrender.com/users/register/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,3 +56,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
