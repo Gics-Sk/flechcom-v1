@@ -1,7 +1,7 @@
 // SCRIPT POUR RENDRE LE MOT DE PASSE VISIBLE OU INVISIBLE
 
 function togglePasswordVisibility() {
-    var passwordInput = document.getElementById("password");
+    var passwordInput = document.getElementById("password1");
     var icon = document.querySelector('.password-toggle i');
 
     if (passwordInput.type === "password") {
